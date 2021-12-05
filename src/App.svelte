@@ -1,7 +1,14 @@
 <script>
+  // component
   import Navbar from "./Navbar.svelte";
-  import Title from "./Title.svelte";
+  import ExpensesList from "./ExpensesList.svelte";
+  // data
+  import expensesData from "./expenses";
+  // variables
+  let expenses = [...expensesData];
 </script>
 
 <Navbar />
-<Title />
+<main class="content">
+  <ExpensesList {expenses} />
+</main>
